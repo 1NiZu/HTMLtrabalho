@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast - BecoCast</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        .player-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .player-container h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        audio {
+            width: 100%;
+            max-width: 600px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .video-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .episode-table {
+            width: 85%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            background-color: #f9f9f9;
+            color: #555;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+        tr:hover td {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        .episode-table a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .episode-table a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nome do Podcast</h1>
+</header>
+
+<div class="player-container">
+    <h2>Último Episódio</h2>
+    <audio controls>
+        <source src="" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+</div>
+
+<div class="video-container">
+    <h2>Assista ao Último Episódio no YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ldRMuLrSw4?si=cQUoqCeNWjd4vOhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<table class="episode-table">
+    <thead>
+        <tr>
+            <th>Título do Episódio</th>
+            <th>Data</th>
+            <th>Duração</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#">Episódio 10: Como Criar um Podcast de Sucesso</a></td>
+            <td>15/03/2025</td>
+            <td>45:30</td>
+        </tr>
+        <tr>
+            <td><a href="#">Episódio 9: Tendências de Podcasts em 2025</a></td>
+            <td>10/03/2025</td>
+            <td>42:10</td>
+        </tr>
+        <tr>
+            <td><a href="#">Episódio 8: O Futuro da Mídia Digital</a></td>
+            <td>05/03/2025</td>
+            <td>40:50</td>
+        </tr>
+       
+    </tbody>
+</table>
+
+<div class="footer">
+    <p>&copy; 2025 Nome do Podcast. Todos os direitos reservados.</p>
+</div>
+
+</body>
+</html>

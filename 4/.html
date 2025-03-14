@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog BECO</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        /* Postagem */
+        .postagem {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .postagem p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Formulário de Comentários */
+        .comentario-form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentario-form input, .comentario-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .comentario-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .comentario-form button:hover {
+            background-color: #444;
+        }
+
+        /* Seção de Comentários */
+        .comentarios {
+            margin-top: 20px;
+        }
+
+        .comentario {
+            background: #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentario strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>Blog do Beco</header>
+
+    <div class="container">
+        <!-- Postagem -->
+        <div class="postagem">
+            <h2>Título da Postagem</h2>
+            <p>se sinta na moita 🌳. Aqui você pode compartilhar suas ideias, notícias ou qualquer outro conteúdo interessante.</p>
+        </div>
+
+        <!-- Formulário de Comentários -->
+        <h2>Deixe um Comentário</h2>
+        <form class="comentario-form" onsubmit="adicionarComentario(event)">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <textarea id="comentario" placeholder="Digite seu comentário..." rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Seção de Comentários -->
+        <h2>Comentários</h2>
+        <div class="comentarios" id="comentarios-lista"></div>
+    </div>
+
+    <script>
+        function adicionarComentario(event) {
+            event.preventDefault();
+
+            // Pegando valores
+            var nome = document.getElementById('nome').value;
+            var comentario = document.getElementById('comentario').value;
+
+            // Criando a estrutura do comentário
+            var novoComentario = `<div class="comentario">
+                <strong>${nome}</strong> <br>
+                <p>${comentario}</p>
+            </div>`;
+
+            // Adicionando o comentário à lista
+            document.getElementById('comentarios-lista').innerHTML += novoComentario;
+
+            // Limpando os campos
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('comentario').value = '';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes</title>
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo das Perguntas */
+        .faq-section {
+            margin-top: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item h2 {
+            font-size: 1.5rem;
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            margin: 0;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: #555;
+            padding: 0 15px;
+            margin-top: 10px;
+            display: none; /* Respostas inicialmente escondidas */
+            background-color: #f9f9f9;
+            padding-bottom: 15px;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        /* Efeito de Hover */
+        .faq-item h2:hover {
+            background-color: #e1e1e1;
+        }
+
+        /* Efeito de Abertura */
+        .faq-item.active h2 {
+            background-color: #e1e1e1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Perguntas Frequentes</h1>
+        </header>
+
+        <!-- Seção de Perguntas e Respostas -->
+        <section class="faq-section">
+            <div class="faq-item">
+                <h2>1. O que é o FAQ?</h2>
+                <p>FAQ significa "Perguntas Frequentes". É uma seção onde são respondidas as perguntas mais comuns feitas pelos usuários sobre um serviço ou produto.</p>
+            </div>
+            <div class="faq-item">
+                <h2>2. Como posso entrar em contato com o suporte?</h2>
+                <p>Você pode entrar em contato com o nosso suporte através do e-mail suporte@exemplo.com ou pelo telefone (11) 1234-5678.</p>
+            </div>
+            <div class="faq-item">
+                <h2>3. Quais são os métodos de pagamento aceitos?</h2>
+                <p>Aceitamos pagamentos via cartão de crédito, débito, PayPal, e transferência bancária. Para mais detalhes, consulte nossa página de métodos de pagamento.</p>
+            </div>
+            <div class="faq-item">
+                <h2>4. Como faço para alterar meu endereço de entrega?</h2>
+                <p>Você pode alterar o seu endereço de entrega acessando a sua conta e atualizando os dados na seção "Endereço de Entrega". Se tiver algum problema, entre em contato com o suporte.</p>
+            </div>
+            <div class="faq-item">
+                <h2>5. Quanto tempo leva para o pedido ser entregue?</h2>
+                <p>O tempo de entrega depende da sua localização e da modalidade de envio escolhida. Em geral, os pedidos são entregues entre 3 e 7 dias úteis após a confirmação do pagamento.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Seleciona todos os itens da FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Adiciona um event listener em cada pergunta
+        faqItems.forEach(item => {
+            item.querySelector('h2').addEventListener('click', () => {
+                // Alterna a classe 'active' ao clicar na pergunta
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

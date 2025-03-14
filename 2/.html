@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container-contato {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+        }
+        .container-contato h1 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .container-contato label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 5px;
+        }
+        .container-contato input,
+        .container-contato textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            transition: border 0.3s ease;
+        }
+        .container-contato input:focus,
+        .container-contato textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .container-contato textarea {
+            resize: vertical;
+            height: 150px; /* Ajustei a altura para dar mais espaço */
+        }
+        .container-contato button {
+            padding: 14px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .container-contato button:hover {
+            background-color: #0056b3;
+        }
+        .container-contato .texto-rodape {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-contato">
+        <h1>Contato</h1>
+        <form action="#" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="texto-rodape">
+            <p>Obrigado por entrar em contato! Responderemos em breve.</p>
+        </div>
+    </div>
+
+</body>
+</html>

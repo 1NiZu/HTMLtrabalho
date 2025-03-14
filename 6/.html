@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Eventos</title>
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #2b2b2b;
+            color: #f1f1f1;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: #333;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Estilo do Calendário Principal */
+        .calendar-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .calendar-wrapper .month-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar-wrapper .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .calendar-day {
+            background-color: #666;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .calendar-day.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .calendar-day .date {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Estilo do Calendário Principal */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        /* Estilos dos Dias */
+        .calendar-day {
+            background-color: #666;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .calendar-day:hover {
+            background-color: #007bff;
+            transform: scale(1.05);
+        }
+
+        .calendar-day .date {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .calendar-day .events {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #ddd;
+        }
+
+        /* Evento dentro do Dia */
+        .event {
+            background-color: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .event:hover {
+            background-color: #0056b3;
+        }
+
+        /* Seções de Eventos Futuros */
+        section {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #555;
+        }
+
+        .event-list {
+            margin-top: 20px;
+        }
+
+        .event-list .event-item {
+            background-color: #444;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #f1f1f1;
+        }
+
+        .event-item h3 {
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .event-item p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Agenda de Eventos</h1>
+        </header>
+
+        <!-- Calendário de Eventos -->
+        <section>
+            <h2>Calendário de Eventos</h2>
+            <div class="calendar-wrapper">
+                <div class="month-title">Março 2025</div>
+                <div class="calendar">
+                    <!-- Dias com Eventos -->
+                    <div class="calendar-day"><div class="date">1</div></div>
+                    <div class="calendar-day"><div class="date">2</div></div>
+                    <div class="calendar-day"><div class="date">3</div></div>
+                    <div class="calendar-day"><div class="date">4</div></div>
+                    <div class="calendar-day"><div class="date">5</div></div>
+                    <div class="calendar-day"><div class="date">6</div></div>
+                    <div class="calendar-day"><div class="date">7</div></div>
+                    <div class="calendar-day"><div class="date">8</div></div>
+                    <div class="calendar-day"><div class="date">9</div></div>
+                    <div class="calendar-day"><div class="date">10</div></div>
+                    <div class="calendar-day"><div class="date">11</div></div>
+                    <div class="calendar-day"><div class="date">12</div></div>
+                    <div class="calendar-day"><div class="date">13</div></div>
+                    <div class="calendar-day"><div class="date">14</div></div>
+                    <div class="calendar-day"><div class="date">15</div></div>
+                    <div class="calendar-day"><div class="date">16</div></div>
+                    <div class="calendar-day"><div class="date">17</div></div>
+                    <div class="calendar-day"><div class="date">18</div></div>
+                    <div class="calendar-day"><div class="date">19</div></div>
+                    <div class="calendar-day"><div class="date">20</div></div>
+                    <div class="calendar-day"><div class="date">21</div></div>
+                    <div class="calendar-day"><div class="date">22</div></div>
+                    <div class="calendar-day"><div class="date">23</div></div>
+                    <div class="calendar-day"><div class="date">24</div></div>
+                    <div class="calendar-day active"><div class="date">25</div>
+                        <div class="events">
+                            <div class="event">Conferência de Tecnologia - 14:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-day active"><div class="date">26</div>
+                        <div class="events">
+                            <div class="event">Hackathon de Desenvolvimento - 09:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-day active"><div class="date">27</div>
+                        <div class="events">
+                            <div class="event">Workshop de Cibersegurança - 16:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-day active"><div class="date">28</div>
+                        <div class="events">
+                            <div class="event">Encontro de Startups - 15:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-day active"><div class="date">29</div>
+                        <div class="events">
+                            <div class="event">Seminário de Desenvolvimento Web - 10:30</div>
+                        </div>
+                    </div>
+                    <div class="calendar-day"><div class="date">30</div></div>
+                    <div class="calendar-day"><div class="date">31</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos Futuros -->
+        <section>
+            <h2>Eventos Futuros</h2>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3>Conferência de Tecnologia</h3>
+                    <p>Data: 25 de Março, 14:00</p>
+                    <p>Local: Centro de Convenções</p>
+                </div>
+                <div class="event-item">
+                    <h3>Hackathon de Desenvolvimento</h3>
+                    <p>Data: 26 de Março, 09:00</p>
+                    <p>Local: Universidade ABC</p>
+                </div>
+                <div class="event-item">
+                    <h3>Workshop de Cibersegurança</h3>
+                    <p>Data: 27 de Março, 16:00</p>
+                    <p>Local: Auditório XYZ</p>
+                </div>
+                <div class="event-item">
+                    <h3>Encontro de Startups</h3>
+                    <p>Data: 28 de Março, 15:00</p>
+                    <p>Local: Pavilhão Y</p>
+                </div>
+                <div class="event-item">
+                    <h3>Seminário de Desenvolvimento Web</h3>
+                    <p>Data: 29 de Março, 10:30</p>
+                    <p>Local: Centro de Inovação</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

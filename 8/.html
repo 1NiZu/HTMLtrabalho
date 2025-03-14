@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        td {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Galeria de Imagens</h1>
+</header>
+
+<section class="gallery">
+    <div class="gallery-item">
+        <img src="Imagens_da_Cidade_de_Campos_do_Jordão_(48049539022).jpg" alt="Imagem 1">
+        <div class="overlay">
+            <p>Imagem 1</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="WhatsApp Image 2025-03-13 at 20.37.27.jpeg" alt="Imagem 2">
+        <div class="overlay">
+            <p>Imagem 2</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="imagens-lindas-imagens-lindas-nascer-do-sol-47.jpg" alt="Imagem 3">
+        <div class="overlay">
+            <p>Imagem 3</p>
+        </div>
+    </div>
+</section>
+
+<table>
+    <thead>
+        <tr>
+            <th>Imagem</th>
+            <th>Detalhes</th>
+            <th>Data de Criação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Imagem 1</td>
+            <td>Imagens de drone da Cidade de Campos do Jordão.</td>
+            <td>12/03/2025</td>
+        </tr>
+        <tr>
+            <td>Imagem 2</td>
+            <td>Um simples rapaz tirando sua selfie.</td>
+            <td>13/03/2025</td>
+        </tr>
+        <tr>
+            <td>Imagem 3</td>
+            <td>Um belo por do sol.</td>
+            <td>14/03/2025</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
